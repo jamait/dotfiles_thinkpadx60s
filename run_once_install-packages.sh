@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo apt install ripgrep
+sudo apt install -Y ripgrep picom

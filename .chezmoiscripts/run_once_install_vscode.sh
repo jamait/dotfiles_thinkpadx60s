@@ -8,3 +8,5 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code # or code-insiders
+
+sudo update-alternatives --set editor /usr/bin/code

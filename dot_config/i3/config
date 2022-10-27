@@ -103,7 +103,7 @@ set_from_resource $white2 color15 #ffffff
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 # set the modifier (Mod4: cmd)
 # To see a complete list, run xmodmap
-#set $mod Mod4
+# set $mod Mod4
 
 #---Starting External Scripts---# #
 
@@ -244,13 +244,13 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Touchpad controls
-#bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+# bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+# bindsym XF86AudioPlay exec playerctl play
+# bindsym XF86AudioPause exec playerctl pause
+# bindsym XF86AudioNext exec playerctl next
+# bindsym XF86AudioPrev exec playerctl previous
 
 # no focus following the mouse
 focus_follows_mouse no

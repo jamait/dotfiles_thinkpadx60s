@@ -1,0 +1,43 @@
+[user]
+	name = "{{ .name }}"
+	email = "{{ .email }}"
+[advice]
+	pushNonFastForward = false
+	statusHints = false
+[alias]
+[color]
+	ui = auto
+[core]
+	editor = nano
+	excludesfile = ~/.gitignore
+	whitespace = trailing-space,space-before-tab
+[diff]
+	renames = copies
+[fetch]
+	fsckobjects = false
+	prune = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[http]
+	cookiefile = ~/.gitcookies
+[pager]
+	branch = false
+	grep = false
+[push]
+	default = current
+[rebase]
+	autosquash = true
+	autostash = true
+[receive]
+	fsckobjects = true
+[status]
+	submoduleSummary = true
+[transfer]
+	fsckobjects = true
+[trim]
+	bases = master,gh-pages
+[url "git@github.com:jamait/"]
+	insteadOf = https://github.com/jamait/

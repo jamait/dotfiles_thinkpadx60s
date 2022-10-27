@@ -11,7 +11,6 @@ font pango:monospace 8
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
-chsh -s /bin/bash nitram
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -32,7 +31,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 # bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# bindsym $mod+f fullscreen toggle
 
 
 #####################################################################################################################
@@ -110,7 +109,7 @@ set_from_resource $white2 color15 #ffffff
 
 # exec urxvtd daemon
 # urxvtc run via Xinitrc because otherwise the scratchpad don't work (race condition?)
-exec --no-startup-id ~/.i3/scripts/urxvtc.sh
+# exec --no-startup-id ~/.i3/scripts/urxvtc.sh
 
 # resize correctly in vmware
 exec --no-startup-id vmware-user-suid-wrapper
@@ -492,19 +491,19 @@ mode "$mode_system" {
 bindsym $mod+BackSpace mode "$mode_system"
 
 ## Manual management of external displays
-set $mode_display Config monitor resolution - Home Setup (h) - Without monitor (d) - Work (w)
-
-mode "$mode_display" {
-    bindsym h exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/home.sh && sh $XDG_CONFIG_HOME/.fehbg, mode "default"
-    bindsym d exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/default.sh && sh $XDG_CONFIG_HOME/.fehbg, mode "default"
-    bindsym w exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/work.sh && sh $XDG_CONFIG_HOME/.fehbg, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+a mode "$mode_display"
+# set $mode_display Config monitor resolution - Home Setup (h) - Without monitor (d) - Work (w)
+# 
+# mode "$mode_display" {
+#     bindsym h exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/home.sh && sh # $XDG_CONFIG_HOME/.fehbg, mode "default"
+#     bindsym d exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/default.sh && sh # $XDG_CONFIG_HOME/.fehbg, mode "default"
+#     bindsym w exec --no-startup-id sh $XDG_CONFIG_HOME/config_monitors/work.sh && sh # $XDG_CONFIG_HOME/.fehbg, mode "default"
+# 
+#     # back to normal: Enter or Escape
+#     bindsym Return mode "default"
+#     bindsym Escape mode "default"
+# }
+# 
+# bindsym $mod+a mode "$mode_display"
 
 # Remap caps lock when new keyboard attached
 bindsym $mod+z exec "setxkbmap -option 'caps:ctbrl_modifier';xcape -e 'Caps_Lock=Escape' &"

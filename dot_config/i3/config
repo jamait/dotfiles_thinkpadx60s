@@ -11,6 +11,7 @@ font pango:monospace 8
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
+chsh -s /bin/bash nitram
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -162,8 +163,8 @@ font pango:Inconsolata 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -242,15 +243,6 @@ bindsym $mod+p focus parent
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
-# Touchpad controls
-# bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
-
-# Media player controls
-# bindsym XF86AudioPlay exec playerctl play
-# bindsym XF86AudioPause exec playerctl pause
-# bindsym XF86AudioNext exec playerctl next
-# bindsym XF86AudioPrev exec playerctl previous
 
 # no focus following the mouse
 focus_follows_mouse no
@@ -403,9 +395,9 @@ exec tuxedo-control-center
 # 1.term 
 # 2.vim (on a temp file) 
 # 3.translation CLI
-for_window [instance="urxvt_scratchpad"] move to scratchpad
-bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec "$DOTFILES/bash/scripts/scratchpad.sh"
+# for_window [instance="urxvt_scratchpad"] move to scratchpad
+# bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
+# exec "$DOTFILES/bash/scripts/scratchpad.sh"
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, sticky enable, border none
@@ -441,25 +433,25 @@ client.urgent           $red1 $red1 $white2 $red1 $red1
 client.placeholder      $red1 $red1 $white2 $red1 $red1
 
 # Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
-bar {
-    status_command i3status --config $I3_CONFIG/i3status.conf
-    # Disable all tray icons
-    tray_output none
-    # tray_output primary
-    separator_symbol "┃"
-    colors {
-        background $black1
-        statusline $white2
-        separator $black2
-
-        #                  border background text
-        focused_workspace  $background $background $red1
-        active_workspace   $black1 $black1 $black2
-        inactive_workspace $background $black1 $foreground
-        urgent_workspace   $red1 $red1 $white2
-        binding_mode       $background $red2 $white2
-    }
-}
+# ar {
+#    status_command i3status --config $I3_CONFIG/i3status.conf
+#    # Disable all tray icons
+#    tray_output none
+#    # tray_output primary
+#    separator_symbol "┃"
+#    colors {
+#        background $black1
+#        statusline $white2
+#        separator $black2
+# 
+#        #                  border background text
+#        focused_workspace  $background $background $red1
+#        active_workspace   $black1 $black1 $black2
+#        inactive_workspace $background $black1 $foreground
+#        urgent_workspace   $red1 $red1 $white2
+#        binding_mode       $background $red2 $white2
+#    }
+# 
 
 # lockscreen
 # set $i3lockwall i3lock -i $I3_CONFIG/wallpapers/2016-04-07-09.34-Village-in-the-sky.png -t
@@ -515,7 +507,7 @@ mode "$mode_display" {
 bindsym $mod+a mode "$mode_display"
 
 # Remap caps lock when new keyboard attached
-bindsym $mod+z exec "setxkbmap -option 'caps:ctrl_modifier';xcape -e 'Caps_Lock=Escape' &"
+bindsym $mod+z exec "setxkbmap -option 'caps:ctbrl_modifier';xcape -e 'Caps_Lock=Escape' &"
 
 exec --no-startup-id $I3_CONFIG/scripts/remaps.sh
 

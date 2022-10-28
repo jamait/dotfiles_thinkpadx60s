@@ -47,7 +47,7 @@ URxvt.scrollBar:            false
 ! Perl extensions
 URxvt.perl-ext-common:      default,matcher
 URxvt.matcher.button:       1
-URxvt.urlLauncher:          firefox
+URxvt.urlLauncher:          brave-browser
 
 ! Cursor
 URxvt.cursorBlink:          true
@@ -62,8 +62,10 @@ URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 ! Disabling ISO 14755 MODE (Ctrl+Shift)
-URxvt.iso14755: false
+URxvt.iso147Back55: false
 URxvt.iso14755_52: false
+
+URxvt.background: [80]#000000
 
 !!Source http://github.com/altercation/solarized
 

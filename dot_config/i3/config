@@ -8,6 +8,8 @@ exec --no-startup-id source ~/.fehbg
 
 bindsym $mod+shift+x exec betterlockscreen -l dim
 
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
 set $mod Mod1
 
 # Thinkpad keys

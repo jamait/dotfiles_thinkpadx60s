@@ -1,0 +1,33 @@
+xterm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+
+XTerm*foreground: rgb:ff/ff/ff
+XTerm*background: rgb:2e/33/3e
+xterm*borderWidth: 0
+
+URxvt*font:           xft:Inconsolata:size=9
+!URxvt.font: xft:terminus:size=7
+!URxvt*font:    xft:FontAwesome:size=11
+!URxvt*font: Roboto:size=8
+
+URxvt*scrollBar: false
+URxvt*foreground: rgb:ff/ff/ff
+URxvt*background: rgb:2e/33/3e
+URxvt*transparent: true
+URxvt*shading: 30
+
+URxvt.color0:           #3f3f3f
+URxvt.color1:           #705050
+URxvt.color2:           #00b45a
+URxvt.color3:           #dfcf8f
+URxvt.color4:           #404552
+URxvt.color5:           #dc8cc3
+URxvt.color6:           #ffffff
+URxvt.color7:           #dcdccc
+URxvt.color8:           #709080
+URxvt.color9:           #cc5454
+URxvt.color12:          #4186be
+URxvt.color13:          #ec93d3
+URxvt.color14:          #93e0e3
+URxvt.color15:          #ffffff

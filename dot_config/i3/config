@@ -1,3 +1,5 @@
+exec xrdb .Xresources
+
 set $mod Mod1
 
 # Thinkpad keys

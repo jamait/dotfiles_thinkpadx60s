@@ -80,8 +80,8 @@ set_from_resource $white2 color15 #ffffff
 
 # i3 config file (v4)
 
-bindsym $mod+Return exec i3-sensible-terminal
-# bindsym $mod+Return exec urxvtc
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
